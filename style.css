@@ -1,0 +1,139 @@
+/* font-family: 'Barlow', sans-serif;
+font-family: 'EB Garamond', serif;*/
+
+:root {
+    --peri: rgb(137, 141, 253);
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    top: 0;
+}
+
+.hero__container {
+    height: 40vh;
+    background-color: var(--peri);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__content {
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+    padding: 1rem 0 .5rem 0;
+    font-family: 'Barlow', sans-serif;
+}
+
+i {
+    color: black;
+}
+
+p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+li {
+    list-style-type: none;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    height: 8vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    height: 100%;
+}
+
+.about__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 10%;
+}
+
+.about__text {
+    text-align: justify;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.2em;
+    padding-bottom: 2rem;
+}
+
+.about__socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.projects__container {
+    background-color: black;
+    padding-bottom: 8vh;
+}
+
+.projects__content {
+    color: white;
+    padding: 2rem 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.projects__content h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+    letter-spacing: 0.8px;
+}
+
+.image {
+    border: 1px solid hotpink;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.project__1,
+.project__2,
+.project__3 {
+    padding: 1em 0;
+    text-align: center;
+}
+
