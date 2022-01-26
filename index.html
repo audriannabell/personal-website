@@ -9,15 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Rampart+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="hamburger__menu">
-
-    </div>
     <div class="hero__container">
         <div class="hero__content">
-            <h1>Audrianna Bell</h1>
-            <h2>Front-End Developer</h2>
+            <div class="hero__shape">
+                <h1>Audrianna Bell</h1>
+                <h2>Front-End Developer</h2>
+                <a href="#">See My Work</button></a>
+            </div>
         </div>
     </div>
     <div class="about__container">
@@ -26,45 +29,76 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsa enim, vel eaque inventore incidunt unde nobis quaerat! Esse reprehenderit similique libero sunt nemo odio aliquid, fugit velit eius, minus distinctio voluptas eos alias eaque assumenda deserunt explicabo non architecto!</p>
             </div>
             <div class="about__socials">
-                <i class="fab fa-github-square fa-3x"></i>
-                <i class="fab fa-linkedin fa-3x"></i>
-                <i class="fab fa-instagram-square fa-3x"></i>
-                <i class="fas fa-envelope-square fa-3x"></i>
+                <a href="https://github.com/audriannabell" target="_blank"><i class="fab fa-github-square fa-3x" alt="github"></i></a>
+                <a href="https://www.linkedin.com/in/audrianna-bell/" target="_blank"><i class="fab fa-linkedin fa-3x" alt="linkedin"></i></a>
+                <a href="https://www.instagram.com/audriannadev/" target="_blank"><i class="fab fa-instagram-square fa-3x" alt="instagram"></i></a>
+                <a href="mailto:audrianna.e.bell@gmail.com"><i class="fas fa-envelope-square fa-3x" alt="email"></i></a>
             </div>
         </div>
     </div>
-    <div class="projects__container">
+    <div class="projects__container" id="projects__container">
         <div class="projects__content">
             <h1>Projects</h1>
-            <div class="project__1">
-                <div class="image">
-
-                </div>
-                <h3>API Project</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div class= "project__2">
-                <div class="image">
-                    
-                </div>
+            <a href='#'>
+            <div class= "project__1">
+                    <img src="Bar42-project.png" alt="Bar 42 Thumbnail">
                 <h3>Bar 42</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Single-page business website for a fictional bar.</p>
             </div>
-            <div class="project__3">
-                <div class="image">
-                    
-                </div>
+            </a>
+            <a href="#">
+            <div class="project__2">
+                <img src="ToDo-Project.png" alt="Bar 42 Thumbnail">
                 <h3>To-Do App</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Simple to-do list app.</p>
+            </div>
+            </a>
+            <a href="#">
+            <div class="project__3">
+                <img src="Linktree-project.png" alt="Britney Aguilera Thumbnail">
+                <h3>Britney Aguilera</h3>
+                <p>Linktree style page for a <br> fictional musician.</p>
+            </div>
+            </a>
+        </div>
+    </div>
+    <div class="contact__container" id="contact__container">
+        <div class="contact__content">
+            <h1>Say Hi!</h1>
+            <div class="contact__text">
+                <a href="mailto:audrianna.e.bell@gmail.com">audrianna.e.bell@gmail.com</a>
+                <a href="tel:909-438-3163">(909) 438-3163</a>
+            </div>
+            <div class="form__container">
+                <form action="https://formsubmit.co/audrianna.e.bell@gmail.com" method="POST">
+                    <input type="text" id="name" name="name" alt="name" placeholder="Name" autocomplete="name" required>
+                    <input type="text" id="email" name="email" alt="email" placeholder="Email" autocomplete="email" required>
+                    <input type="text" id="phone" name="phone" alt="phone" placeholder="Phone (optional)" autocomplete="tel">
+                    <textarea id="message" name="message" alt="message" placeholder="Message" required></textarea>
+                    <input type="submit" id="submit" value="Send" accesskey="s"></submit>
+                </form>
             </div>
         </div>
+    </div>
+    <div class="resume__container" id="resume__container">
+        <div class="resume__content">
+            <div class="resume__button">
+                <a href="#" alt="See My Resume">See My Resume</a>
+            </div>
+        </div>
+    </div>
+    <div class="socials__bottom">
+        <a href="https://github.com/audriannabell" target="_blank"><i class="fab fa-github-square fa-3x" alt="github"></i></a>
+        <a href="https://www.linkedin.com/in/audrianna-bell/" target="_blank"><i class="fab fa-linkedin fa-3x" alt="linkedin"></i></a>
+        <a href="https://www.instagram.com/audriannadev/" target="_blank"><i class="fab fa-instagram-square fa-3x" alt="instagram"></i></a>
     </div>
     <footer>
         <nav>
-            <li>projects</li>
-            <li>contact</li>
-            <li>resume</li>
+            <a class="resume__nav" href="#resume__container"><li>resume</li></a>
+            <a class="projects__nav" href="#projects__container"><li>projects</li></a>
+            <a class="contact__nav" href="#contact__container"><li>contact</li></a>
         </nav>
     </footer>
 </body>
+<script src="script.js"></script>
 </html>
