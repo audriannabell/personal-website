@@ -14,8 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Rampart+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="hero__container">
+    <div class="hero__container" id="hero__container">
         <div class="hero__content">
+            <nav>
+                <a class="about__nav" href="#about__container"><li>about</li></a>
+                <a class="projects__nav" href="#projects__container"><li>projects</li></a>
+                <span><a class="skills__nav" href="#skills__container"><li>skills</li></a></span>
+                <a class="contact__nav" href="#contact__container"><li>contact</li></a>
+            </nav>
             <div class="hero__shape">
                 <h1>Audrianna Bell</h1>
                 <h2>Front-End Developer</h2>
@@ -23,10 +29,19 @@
             </div>
         </div>
     </div>
-    <div class="about__container">
+    <div class="about__container" id="about__container">
+        <h1>About Me</h1>
         <div class="about__content">
             <div class="about__text">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsa enim, vel eaque inventore incidunt unde nobis quaerat! Esse reprehenderit similique libero sunt nemo odio aliquid, fugit velit eius, minus distinctio voluptas eos alias eaque assumenda deserunt explicabo non architecto!</p>
+            </div>
+            <div class="about__facts">
+                <span>Location:</span>
+                <p>Salem, OR</p>
+                <span>Hobbies:</span>
+                <p>Dungeons and Dragons<br>Knitting<br>Wine Tasting</p>
+                <span>Probably Craving:</span>
+                <p>Chinese Food<br>Iced Coffee</p>
             </div>
             <div class="about__socials">
                 <a href="https://github.com/audriannabell" target="_blank"><i class="fab fa-github-square fa-3x" alt="github"></i></a>
@@ -37,8 +52,8 @@
         </div>
     </div>
     <div class="projects__container" id="projects__container">
+        <h1>Projects</h1>
         <div class="projects__content">
-            <h1>Projects</h1>
             <a href='#'>
             <div class= "project__1">
                     <img src="Bar42-project.png" alt="Bar 42 Thumbnail">
@@ -62,12 +77,56 @@
             </a>
         </div>
     </div>
+    <div class="skills__container">
+        <h1>Skills</h1>
+        <div class="skills__content">
+            <div class="skills__left">
+                <h2>Front-End</h2>
+                <div class="skills__icons">
+                    <div class="html">
+                        <i class="fas fa-file-code fa-3x"></i>
+                        <h3>HTML5</h3>
+                    </div>
+                    <div class="css">
+                        <i class="fab fa-css3-alt fa-3x"></i>
+                        <h3>CSS3</h3>
+                    </div>
+                    <div class="javascript">
+                        <i class="fab fa-js-square fa-3x"></i>
+                        <h3>JavaScript</h3>
+                    </div>
+                </div>
+                <button>Resume</button>
+            </div>
+            <div class="skills__right">
+                <h2>Non-Code</h2>
+                Microsoft Office</li>
+                        <ul>
+                            <li>Word</li>
+                            <li>Outlook</li>
+                            <li>Excel</li>
+                            <li>Powerpoint</li>
+                        </ul>
+                    <li>Google Suite</li>
+                        <ul>
+                            <li>Docs</li>
+                            <li>Sheets</li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="contact__container" id="contact__container">
         <div class="contact__content">
-            <h1>Say Hi!</h1>
             <div class="contact__text">
+                <h1>Say Hi!</h1>
                 <a href="mailto:audrianna.e.bell@gmail.com">audrianna.e.bell@gmail.com</a>
                 <a href="tel:909-438-3163">(909) 438-3163</a>
+                <div class="contact__socials">
+                    <a href="https://github.com/audriannabell" target="_blank"><i class="fab fa-github-square fa-3x" alt="github"></i></a>
+                    <a href="https://www.linkedin.com/in/audrianna-bell/" target="_blank"><i class="fab fa-linkedin fa-3x" alt="linkedin"></i></a>
+                    <a href="https://www.instagram.com/audriannadev/" target="_blank"><i class="fab fa-instagram-square fa-3x" alt="instagram"></i></a>
+                </div>
             </div>
             <div class="form__container">
                 <form action="https://formsubmit.co/audrianna.e.bell@gmail.com" method="POST">
@@ -80,18 +139,7 @@
             </div>
         </div>
     </div>
-    <div class="resume__container" id="resume__container">
-        <div class="resume__content">
-            <div class="resume__button">
-                <a href="#" alt="See My Resume">See My Resume</a>
-            </div>
-        </div>
-    </div>
-    <div class="socials__bottom">
-        <a href="https://github.com/audriannabell" target="_blank"><i class="fab fa-github-square fa-3x" alt="github"></i></a>
-        <a href="https://www.linkedin.com/in/audrianna-bell/" target="_blank"><i class="fab fa-linkedin fa-3x" alt="linkedin"></i></a>
-        <a href="https://www.instagram.com/audriannadev/" target="_blank"><i class="fab fa-instagram-square fa-3x" alt="instagram"></i></a>
-    </div>
+<!--
     <footer>
         <nav>
             <a class="resume__nav" href="#resume__container"><li>resume</li></a>
@@ -99,6 +147,7 @@
             <a class="contact__nav" href="#contact__container"><li>contact</li></a>
         </nav>
     </footer>
+-->
 </body>
 <script src="script.js"></script>
 </html>
