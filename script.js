@@ -1,4 +1,4 @@
-//nav buttons
+//nav buttons scroll into view on click
 
 let projectButton = document.querySelector('.projects__nav') ;
 let projectButton2 = document.querySelector('.projects__nav2');
@@ -92,5 +92,52 @@ resumeButton.addEventListener("click", function (e){
 });
 });
 
-//section in viewport is underlined
+//nav slide in on hamburger click
+
+const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+
+    //toggle nav
+
+burger.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+
+            //animate links
+    navLinks.forEach((link, index) => {
+        if(link.style.animation) {
+             link.style.animation = '';
+        } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+        }
+    });
+
+    //burger animation
+
+    burger.classList.toggle('toggle');
+
+});
+
+//close nav when x is clicked
+
+navLinks.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    nav.classList.remove("nav-active");
+    burger.classList.remove('toggle');
+
+    navLinks.forEach((link, index) => {
+        if(link.style.animation) {
+             link.style.animation = '';
+        } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+        }
+    });
+}
+
+
+}
+
+navSlide();
 
