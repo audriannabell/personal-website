@@ -1,3 +1,4 @@
+
 a {
     text-decoration: none;
     color: inherit;
@@ -17,11 +18,17 @@ body {
     top: 0;
 }
 
-button {
-    border: 2px solid black;
-    background-color: transparent;
-    font-size: 1.5em;
-    padding: .6rem 1.5rem;
+button,
+#submit {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+    background-color: #dc851f;
+    border-radius: 10px;
+    color: rgb(37,39,49);
+    border: 1px solid rgb(37,39,49);
+    padding: .6rem 1rem;
 }
 
 h1 {
@@ -55,17 +62,31 @@ img {
 }
 
 input {
-    height: 2rem;
+    height: 1.5rem;
 }
 
 input, 
 textarea {
     font-family: 'Lato', sans-serif;
-    font-size: 1.3em;
+    font-size: 1em;
     padding: .6rem;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     border-radius: 10px;
+    background-color: rgb(192,195,208);
+    
+}
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: black;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: black;
 }
 
 header nav {
@@ -79,7 +100,7 @@ header nav {
     letter-spacing: 1px;
     font-size: 1.2em;
     z-index: 9999;
-    background-color: #012e3c;
+    background-color: rgb(37,39,49);
     color: white;
     box-shadow: rgba(0, 0, 0, 0.65) 0 0 .2rem, rgba(0, 0, 0, 0.35) 0 0 .3rem inset;
 }
@@ -88,7 +109,7 @@ header nav {
 p {
     margin: 0;
     padding: 0;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
 }
@@ -113,8 +134,21 @@ form textarea:focus {
 
 footer {
     min-height: 40vh;
-    background-color: rgb(1, 46, 60);
+    background-color: rgb(37,39,49);
     color: white;
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem 1rem 1.5rem 1rem;
+    margin: 0 5rem;
+    border-bottom: 1px solid white;
+}
+
+footer nav .initials h3{
+    padding: 0 10rem;
+    margin: 0;
 }
 
 footer .ifab, 
@@ -126,6 +160,20 @@ footer li {
     text-transform: uppercase;
 }
 
+footer .socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 4rem;
+    padding-bottom: 1rem;
+}
+
+.footer__note {
+    font-size: .8em;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
 ul,
 li {
     list-style-type: none;
@@ -134,7 +182,7 @@ li {
 .initials h1 {
     font-size: 1.6em;
     padding-left: 10%;
-    width: 8rem;
+    width: 10rem;
 }
 
 .initials h1:hover {
@@ -155,6 +203,8 @@ li {
     align-items: center;
     width: 45%;
     margin-right: 5%;
+    height: 100%;
+    margin: 0 5%
 }
 
 .nav-links li {
@@ -165,6 +215,7 @@ li {
     padding: .3rem .5rem;
 }
 
+
 .burger {
     display: none;
     padding-right: 10%;
@@ -173,15 +224,16 @@ li {
 .burger div {
     width: 25px;
     height: 3px;
+    background-color: white;
     margin: 5px 0;
     transition: all 0.3s ease;
 }
+
 .hero__container {
     height: 100vh;
     top: 0;
-    background: linear-gradient(140deg, #125567, #5da5b9, #daeff4);
+    background: linear-gradient(140deg, rgb(37,39,49),rgb(103,109,137), rgb(192,195,208));
     color: white;
-    /*background-image: url(image-from-rawpixel-id-3282793-original.jpg);*/
     background-size: cover;
 }
 
@@ -222,12 +274,9 @@ li {
 
 .hero__text button{
     margin-top: 4rem;
-    aspect-ratio: none;
-    background-color: #012e3c;
+    background-color: rgba(37,39,49, .6);
     color: white;
-    border: none;
-    border-radius: 12px;
-    box-shadow: rgb(38, 57, 77) 0px 10px 15px -5px, rgba(5,168,219, 0.2) 0 10px 15px 0 inset;
+    border: 1px solid white;
 }
 
 
@@ -237,7 +286,8 @@ li {
     align-items: center;
     padding: 4rem 10%;
     min-height: 35vh;
-    background-color: #daeff4;
+    background-color: rgb(103,109,137);
+    color: white;
 }
 
 .about__content {
@@ -245,23 +295,26 @@ li {
     display: flex;
     justify-content: center;
     gap: 8rem;
-
 }
 
 .about__left {
     margin: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 .about__socials {
     display: flex;
     justify-content: space-around;
-    padding: 0 10%;
-    margin-top: 4rem;
-    height: 100%;
+    padding: 1rem 10%;
+    margin-top: 2rem;
+    border: 1px solid white;
+    background-color: rgba(37,39,49, .3);
+    border-radius: 10px;
 }
 
 .about__photo {
-    width: 30vw;
+    min-width: 30vw;
     aspect-ratio: 3 / 2;
     background-size: cover;
     background-image: url("clement-helardot-95YRwf6CNw8-unsplash.jpg");
@@ -273,28 +326,94 @@ li {
 }
 
 .about__text h2 {
-    margin: 5rem 0 2rem 0;
+    margin: 1rem 0 2rem 0;
     font-size: 2.5em;
 }
 
 .about__text button {
-    font-size: 1.2em;
-    padding: .6rem 1rem; 
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
-.projects-skills__wrapper {
-    padding: 5rem 10%;    
-    min-height: 80vh;
-    background-color: #1b4d5b;
+.projects__container,
+.skills__container {
+    padding: 3rem 10%;    
+}
+
+.projects__container {  
+    padding-bottom: 5rem;
+    min-height: 30vh;
+    background-color: rgb(48,51,64);
+    color: white;
+}
+
+.projects__content {
+    display: flex;
+    padding: 0;
+    justify-content: flex-start;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.projects__content button {
+    width: 100%;
+}
+
+.project__1, 
+.project__2, 
+.project__3 {
+    background-color: rgba(0,0,0,.3);
+    width: 14rem;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.projects__content img{
+    border-radius: 10px;
+    height: 14rem;
+    aspect-ratio: 1 / 1;
+    margin-bottom: .5rem;
+    cursor: pointer;
+}
+
+.projects__content h3 {
+    font-size: 1.3em;
+}
+
+.projects__content h3,
+.projects__content p {
+    align-self: flex-start;
+    padding-left: .2rem;
+    cursor: default;
+}
+
+.projects__content button {
+    cursor: pointer;
+}
+
+
+.project__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.project__buttons i {
+    margin-right: .4rem;
+}
+
+.todo a {
+    display: flex;
 }
 
 .skills__container {
     color: white;
+    background-color: rgb(103,109,137);
 }
 
 .skills__content {
@@ -321,18 +440,21 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, .2);
     border: 1px solid white;
+    border-radius: 10px;
 }
 
 .skills__right h2 {
-    padding: 1rem 2rem 0 2rem;
+    padding: 2rem;
+    padding-bottom: 0;
+    font-size: 2em;
 }
 
 .tools {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 400;
     padding-bottom: 1rem;
     padding: 0 2rem 1rem 2rem;
@@ -349,40 +471,13 @@ li {
     padding-left: 2rem;
 }
 
-.projects__container {
-    color: white;
-}
-
-.projects__content {
-    display: flex; 
-    gap: 4rem;
-    margin-top: 2rem;
-}
-
-.projects__content h3 {
-    font-size: 1.6em;
-}
-
-.project__1 , 
-.project__2 , 
-.project__3  {
-    width: 20vw;
-}
-
-.project__1 img, 
-.project__2 img, 
-.project__3 img {
-    border-radius: 10px;
-    height: 12rem;
-}
-
 .skills__icons {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     width: 80%;
-    row-gap: 2rem;
-    column-gap: 2rem;
+    row-gap: 1rem;
+    column-gap: 1rem;
 }
 
 .html,
@@ -395,23 +490,20 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(120, 120, 120, .3);
+    background-color: rgba(0,0,0, .1);
     border: 1px solid lightgray;
     border-radius: 10px;
-    height: 10rem;
-    width: 10rem;
-}
-
-.projects__content {
-    display: flex;
+    height: 8rem;
+    width: 8rem;
 }
 
 .resume__container {
-    background-color: rgba(120,120,120,.5);
-    font-size: 1.2em;
+    background-color: rgba(48,51,64,.6);
+    font-size: 1em;
     border-top: 1px solid white;
-    padding: 2rem;
+    padding: 1rem 1.5rem;
     align-items: center;
+    border-radius: 0 0 10px 10px;
 }
 
 .resume__container h4 {
@@ -420,29 +512,22 @@ li {
     padding-bottom: 1em;
 }
 
-.resume__container button {
-    color: white;
-    font-size: 1.3em;
-    font-weight: 300;
-    border: 2px solid white;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
 img {
     aspect-ratio: 1 / 1;
     max-width: 15rem;
 }
 .contact__container {
-    background-color: #B8D6DF;
+    background-color: rgb(48,51,64);
 }
 
 .contact__content {
     display: flex;
     padding: 6rem 10%;
+    color: white;
 }
 
 .contact__text h3 {
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 0;
     margin: 0;
     font-weight: 400;
@@ -450,7 +535,7 @@ img {
 }
 
 .contact__text {
-    width: 50%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -459,7 +544,7 @@ img {
 .contact__text a {
     font-family: 'Barlow', sans-serif;
     text-decoration: none;
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: 400;
     display: flex;
     gap: 2rem;
@@ -482,10 +567,10 @@ img {
     justify-content: center;
     align-items: center;
     gap: .5rem;
-    padding: 4rem 0;
-    width: 50%;
+    padding: 2rem 0;
+    width: 45%;
     border-radius: 20px;
-    background-color: rgba(120, 120, 120, .5);
+    background-color: rgba(103,109,137, .8);
 }
 
 #message {
@@ -494,11 +579,7 @@ img {
 
 #submit {
     height: 3rem;
-    width: 40%;
-    text-transform: uppercase;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 500;
-    border:none;
+    width: 30%;
 }
 
 @media (max-width: 500px) {
@@ -570,6 +651,38 @@ img {
     }
 }
 
-@media (min-width: 900px) {
+/*large screens*/
+
+@media (min-height: 900px) {
+
+    .about__container {
+        padding: 5rem 0;
+    }
+
+    .about__content {
+        justify-content: flex-start;
+        padding: 0 10%;
+    }
+
+    .about__left {
+        padding: 0;
+    }
+
+    header nav {
+        height: 6vh;
+    }
+
+    .about__photo {
+        max-height: 100%;
+        min-width: 25vw;
+    }
+
+    .about__text {
+        width: 50%;
+    }
+
+    .about__text button {
+        margin-top: 4rem;
+    }
 
 }
