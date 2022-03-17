@@ -1,15 +1,26 @@
 //nav buttons scroll into view on click
+let homeButton = document.querySelector('.home__nav');
+let homeButton2 = document.querySelector('.home__nav2');
+
+let aboutButton = document.querySelector('.about__nav');
+let aboutButton2 = document.querySelector('.about__nav2');
 
 let projectButton = document.querySelector('.projects__nav') ;
 let projectButton2 = document.querySelector('.projects__nav2');
+let projectButton3 = document.querySelector('.projects__nav3');
+
 let contactButton = document.querySelector('.contact__nav') ;
 let contactButton2 = document.querySelector('.contact__nav2')
-let aboutButton = document.querySelector('.about__nav') ;
-let skillsButton = document.querySelector('.skills__nav') ;
+let contactButton3 = document.querySelector('.contact__nav3')
+
+let skillsButton = document.querySelector('.skills__nav');
+let skillsButton2 = document.querySelector('.skills__nav2');
+
 let resumeButton = document.querySelector('.resume__nav');
-let homeButton = document.querySelector('.home__nav');
+let resumeButton2 = document.querySelector('.resume__nav2');
 
-homeButton.addEventListener("click", function (e){
+
+function scrollStart(e) {
     e.preventDefault();
 
     document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -17,42 +28,10 @@ homeButton.addEventListener("click", function (e){
     block: 'start',
     inline: 'center'
 
-});
-});
-
-aboutButton.addEventListener("click", function (e){
-    e.preventDefault();
-
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-    behavior: 'smooth',
-    block: 'center',
-    inline: 'center'
     });
-});
+};
 
-projectButton.addEventListener("click", function (e){
-   e.preventDefault();
-
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
-    inline: 'center'
-
-});
-});
-
-projectButton2.addEventListener("click", function (e){
-    e.preventDefault();
-
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
-    inline: 'center'
-
-});
-});
-
-skillsButton.addEventListener("click", function (e){
+function scrollCenter(e) {
     e.preventDefault();
 
     document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -60,37 +39,28 @@ skillsButton.addEventListener("click", function (e){
     block: 'center',
     inline: 'center'
 
-});
-});
+    });
+};
 
-contactButton.addEventListener("click", function (e){
-    e.preventDefault();
+homeButton.addEventListener("click", scrollStart)
+homeButton2.addEventListener("click", scrollStart)
 
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-    behavior: 'smooth',
-    block: 'nearest',
-    inline: 'center'});
-});
+aboutButton.addEventListener("click", scrollCenter)
+aboutButton2.addEventListener("click", scrollCenter)
 
-contactButton2.addEventListener("click", function (e){
-    e.preventDefault();
+projectButton.addEventListener("click", scrollStart)
+projectButton2.addEventListener("click", scrollStart)
+projectButton3.addEventListener("click", scrollStart)
 
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-    behavior: 'smooth',
-    block: 'nearest',
-    inline: 'center'});
-});
+skillsButton.addEventListener("click", scrollCenter)
+skillsButton2.addEventListener("click", scrollCenter)
 
-resumeButton.addEventListener("click", function (e){
-    e.preventDefault();
+contactButton.addEventListener("click", scrollStart)
+contactButton2.addEventListener("click", scrollStart)
+contactButton3.addEventListener("click", scrollStart)
 
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-    behavior: 'smooth',
-    block: 'center',
-    inline: 'center'
-
-});
-});
+resumeButton.addEventListener("click", scrollCenter)
+resumeButton2.addEventListener("click", scrollCenter)
 
 //nav slide in on hamburger click
 

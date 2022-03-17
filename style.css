@@ -1,8 +1,19 @@
+:root {
+    --dark: rgb(37,32,49);
+    --dark2: rgb(48,45,64);
+    --med: rgb(93,93,127);
+    --light: rgb(192,189,208);
+    --lightest: rgb(242, 239, 255);
+    --orange: rgb(240, 147, 51);
+    --orange2: rgb(210,117,21);
+}
 
 a {
     text-decoration: none;
     color: inherit;
 }
+
+
 
 html, 
 body {
@@ -24,11 +35,19 @@ button,
     font-size: 1.1em;
     font-family: 'Barlow', sans-serif;
     font-weight: 500;
-    background-color: #dc851f;
+    background-color: var(--orange);
     border-radius: 10px;
-    color: rgb(37,39,49);
-    border: 1px solid rgb(37,39,49);
+    color: var(--dark);
+    border: 1px solid var(--dark);
     padding: .6rem 1rem;
+    transition: all .2s ease-in;
+}
+
+button:hover,
+#submit:hover {
+    background-color: var(--orange2);
+    font-weight: 600;
+    border-radius: 30px;
 }
 
 h1 {
@@ -57,6 +76,18 @@ h4 {
     font-weight: 300;
 }
 
+i.fas,
+i.fab {
+    transition: all .2s ease-in;
+}
+
+i.fas:hover,
+i.fab:hover {
+    transform: scale(1.2);
+    box-shadow: rgb(0,0,0) 0px 20px 30px -10px;
+}
+
+
 img {
     object-fit: cover;
 }
@@ -72,20 +103,28 @@ textarea {
     padding: .6rem;
     margin-bottom: .5rem;
     border-radius: 10px;
-    background-color: rgb(192,195,208);
+    background-color: var(--light);
     
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    background-color: var(--lightest);
+    border: 2px solid black;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: black;
     opacity: 1; /* Firefox */
-  }
+}
   
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: black;
-  }
+
+}
   
-  ::-ms-input-placeholder { /* Microsoft Edge */
+::-ms-input-placeholder { /* Microsoft Edge */
     color: black;
 }
 
@@ -100,7 +139,7 @@ header nav {
     letter-spacing: 1px;
     font-size: 1.2em;
     z-index: 9999;
-    background-color: rgb(37,39,49);
+    background-color: var(--dark);
     color: white;
     box-shadow: rgba(0, 0, 0, 0.65) 0 0 .2rem, rgba(0, 0, 0, 0.35) 0 0 .3rem inset;
 }
@@ -122,38 +161,48 @@ form {
     gap: 1.3rem;
 }
 
-form input,
-form textarea {
+form :is(input, textarea) {
     border: 1px solid black;
-}
-
-form input:focus, 
-form textarea:focus {
-    outline: 2px solid green;
 }
 
 footer {
     min-height: 40vh;
-    background-color: rgb(37,39,49);
+    background-color: var(--dark);
     color: white;
 }
 
 footer nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 4rem 1rem 1.5rem 1rem;
     margin: 0 5rem;
     border-bottom: 1px solid white;
 }
 
-footer nav .initials h3{
-    padding: 0 10rem;
-    margin: 0;
+.footer__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
 }
 
-footer .ifab, 
-footer .ifas {
-    color: white;
+.footer__nav a {
+    transition: all .2s ease-in-out;
+}
+
+.footer__nav a:hover {
+    letter-spacing: 2px;
+    padding: .5vh .7vh;
+    margin: -.5vh -.7vh;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+
+footer nav .initials h3{
+    padding: 0 2rem;
+    margin: 0;
+    font-size: 1.3em;
+    transition: all .2s ease-out;
 }
 
 footer li {
@@ -183,10 +232,12 @@ li {
     font-size: 1.6em;
     padding-left: 10%;
     width: 10rem;
+    transition: all .2s ease-in;
 }
 
-.initials h1:hover {
-    letter-spacing: .1px;
+.initials h1:hover,
+footer nav .initials h3:hover {
+    letter-spacing: 2px;
 }
 
 .initials h1 span {
@@ -215,6 +266,16 @@ li {
     padding: .3rem .5rem;
 }
 
+.nav-links a {
+    transition: all .2s ease-in-out;
+}
+
+.nav-links a:hover {
+    letter-spacing: 2px;
+    padding: .5vh .7vh;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
 
 .burger {
     display: none;
@@ -232,7 +293,7 @@ li {
 .hero__container {
     height: 100vh;
     top: 0;
-    background: linear-gradient(140deg, rgb(37,39,49),rgb(103,109,137), rgb(192,195,208));
+    background: linear-gradient(140deg, var(--dark),var(--med), var(--light));
     color: white;
     background-size: cover;
 }
@@ -248,13 +309,13 @@ li {
 
 .hero__text {
     display: flex;
-    margin: 0 8%;
+    margin: 0 10%;
     height: 80vh;
-    padding-left: 10rem;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     border-radius: 10px;
+    transform: translateY(8vh);
 }
 
 .hero__text h1 {
@@ -268,15 +329,27 @@ li {
 .hero__text h2 {
     letter-spacing: .1em;
     font-weight: 300;
+    font-size: 2.2em;
     padding: 0;
     margin: 0;
+    margin-top: .3rem;
 }
 
 .hero__text button{
-    margin-top: 4rem;
-    background-color: rgba(37,39,49, .6);
+    margin-top: 3rem;
+    background-color: rgba(37,32,49, .4);
+    padding: .5rem 2rem;
+    font-size: 1.3em;
     color: white;
     border: 1px solid white;
+    border-radius: 0;
+    transition: all .2s ease-in-out;
+
+}
+
+.hero__text button:hover {
+    border-radius: 30px;
+    border: 2px solid white;
 }
 
 
@@ -286,7 +359,7 @@ li {
     align-items: center;
     padding: 4rem 10%;
     min-height: 35vh;
-    background-color: rgb(103,109,137);
+    background-color: var(--med);
     color: white;
 }
 
@@ -309,7 +382,7 @@ li {
     padding: 1rem 10%;
     margin-top: 2rem;
     border: 1px solid white;
-    background-color: rgba(37,39,49, .3);
+    background-color: rgba(37,32,49, .3);
     border-radius: 10px;
 }
 
@@ -342,7 +415,7 @@ li {
 .projects__container {  
     padding-bottom: 5rem;
     min-height: 30vh;
-    background-color: rgb(48,51,64);
+    background-color: var(--dark2);
     color: white;
 }
 
@@ -383,8 +456,7 @@ li {
     font-size: 1.3em;
 }
 
-.projects__content h3,
-.projects__content p {
+.projects__content :is(h3, p) {
     align-self: flex-start;
     padding-left: .2rem;
     cursor: default;
@@ -413,7 +485,7 @@ li {
 
 .skills__container {
     color: white;
-    background-color: rgb(103,109,137);
+    background-color: var(--med);
 }
 
 .skills__content {
@@ -498,7 +570,7 @@ li {
 }
 
 .resume__container {
-    background-color: rgba(48,51,64,.6);
+    background-color: rgba(48,45,64,.6);
     font-size: 1em;
     border-top: 1px solid white;
     padding: 1rem 1.5rem;
@@ -512,12 +584,15 @@ li {
     padding-bottom: 1em;
 }
 
+.resume__container button {
+    padding: .6rem 2.5rem;
+}
 img {
     aspect-ratio: 1 / 1;
     max-width: 15rem;
 }
 .contact__container {
-    background-color: rgb(48,51,64);
+    background-color: var(--dark2);
 }
 
 .contact__content {
@@ -551,14 +626,24 @@ img {
     align-items: flex-end;
 }
 
-.contact__text i {
-    transform: scale(1.6);
+.contact__text :is(i.fab, i.fas) {
+    transform: scale(1.8);
     padding-left: 1.2rem;
+    box-shadow: none;
 }
 
-.contact__text a:hover, 
-.contact__text i:hover {
-    color: grey;
+.contact__text a {
+    transition: all .2s ease-in;
+}
+
+.contact__text :is(a, i):hover {
+    color: rgb(190,190,190);
+    transform: scale(1.1);
+}
+
+.contact__text :is(i.fas, i.fab):hover {
+    transform: scale(1.8);
+    box-shadow: none;
 }
 
 .form__container {
@@ -570,7 +655,7 @@ img {
     padding: 2rem 0;
     width: 45%;
     border-radius: 20px;
-    background-color: rgba(103,109,137, .8);
+    background-color: rgba(103,103,137, .8);
 }
 
 #message {
@@ -579,7 +664,8 @@ img {
 
 #submit {
     height: 3rem;
-    width: 30%;
+    width: 40%;
+    text-align: center;
 }
 
 @media (max-width: 500px) {

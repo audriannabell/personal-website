@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audrianna Bell - Front-End Developer</title>
+    <title>Audrianna Bell - Web Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
@@ -38,31 +38,32 @@
             <div class="hero__content">
                 <div class="hero__text">
                     <h1>Audrianna Bell</h1>
-                    <h2>Front-End Developer</h2>
+                    <h2>Front-End Web Developer</h2>
                     <button class="projects__nav2" href="#projects__container">See My Work</button>
                 </div>
             </div>
         </div>
         <section id="about__container">
-        <div class="about__container">
-            <div class="about__content">
-                <div class="about__left">
-                    <div class="about__photo"></div>
-                    <div class="about__socials">
-                        <a href="https://github.com/audriannabell" target="_blank"><i class="fab fa-github-square fa-2x" alt="github"></i></a>
-                        <a href="https://www.linkedin.com/in/audrianna-bell/" target="_blank"><i class="fab fa-linkedin fa-2x" alt="linkedin"></i></a>
-                        <a href="https://www.instagram.com/audriannadev/" target="_blank"><i class="fab fa-instagram-square fa-2x" alt="instagram"></i></a>
-                        <a href="mailto:audrianna.e.bell@gmail.com"><i class="fas fa-envelope-square fa-2x" alt="email"></i></a>
+            <div class="about__container">
+                <div class="about__content">
+                    <div class="about__left">
+                        <div class="about__photo"></div>
+                        <div class="about__socials">
+                            <a href="https://github.com/audriannabell" target="_blank"><i class="fab fa-github fa-2x" alt="github"></i></a>
+                            <a href="https://codepen.io/audriannabell" target="_blank"><i class="fab fa-codepen fa-2x" alt="codepen"></i></a>
+                            <a href="https://www.instagram.com/audriannadev/" target="_blank"><i class="fab fa-instagram fa-2x" alt="instagram"></i></a>
+                            <a href="mailto:audrianna.e.bell@gmail.com"><i class="fas fa-envelope fa-2x" alt="email"></i></a>
+                        </div>
+                    </div>
+                    <div class="about__text">
+                        <h2>About Me</h2>
+                        <p>Hi, I'm Audrianna! I'm a Front-End Developer in Salem, OR with a serious passion for creating intuitive, accessible user experiences. I am driven, curious, and a quick study.
+                            <br><br>Let's talk about how I can help your team.</p>
+                        <button class="contact__nav2" href="#contact__container">Contact Me</button>
                     </div>
                 </div>
-                <div class="about__text">
-                    <h2>About Me</h2>
-                    <p>Hi, I'm Audrianna! I'm a Front-End Developer in Salem, OR with a serious passion for creating intuitive, accessible user experiences. I am driven, curious, and a quick study.
-                        <br><br>Let's talk about how I can help your team.</p>
-                    <button class="contact__nav2" href="#contact__container">Contact Me</button>
-                </div>
             </div>
-        </div>
+        </section>
             <div class="projects__container" id="projects__container">
                 <h2>Projects</h2>
                 <div class="projects__content">
@@ -73,7 +74,7 @@
                             <p>Single-page business website for a fictional bar.</p>
                             <div class="project__buttons">
                                 <a href='bar42' target="_blank"><button>View Site</button></a>
-                                <a href='#' target="_blank"><button><i class="fab fa-github"></i>Code</button></a>
+                                <a href='https://github.com/audriannabell/Bar-42' target="_blank"><button><i class="fab fa-github"></i>Code</button></a>
                             </div>
                         </a>
                     </div>
@@ -84,7 +85,7 @@
                             <p>Fully responsive to-do list app.</p>
                             <div class="project__buttons">
                                 <a href='todo' target="_blank"><button>View Site</button></a>
-                                <a href='#' target="_blank"><button><i class="fab fa-github"></i>Code</button></a>
+                                <a href='https://github.com/audriannabell/To-Do-App' target="_blank"><button><i class="fab fa-github"></i>Code</button></a>
                             </div>
                         </a>
                     </div>
@@ -95,7 +96,7 @@
                             <p>Linktree style page for a fictional musician.</p>
                             <div class="project__buttons">
                                 <a href='linktree' target="_blank"><button>View Site</button></a>
-                                <a href='#' target="_blank"><button><i class="fab fa-github"></i>Code</button></a>
+                                <a href='https://github.com/audriannabell/Linktree-Project' target="_blank"><button><i class="fab fa-github"></i>Code</button></a>
                             </div>
                         </a>
                     </div>
@@ -205,20 +206,24 @@
     </main>
     <footer>
         <nav>
-            <li><a class="about__nav" href="#about__container">about</a></li>
-            <li><a class="projects__nav " href="#projects__container">projects</a></li>
-            <li><a class="skills__nav" href="#skills__container">skills</a></li>
-            <div class="initials">
-                <h3><span>{</span> A<i> // </i>B <span>}</span></h3></a>
+            <div class="footer__nav">
+                <a class="about__nav2" href="#about__container"><li>about</li></a>
+                <a class="projects__nav3 " href="#projects__container"><li>projects</li></a>
+                <a class="skills__nav2" href="#skills__container"><li>skills</li></a>
             </div>
-            <li><a class="resume__nav" href="#skills__container">resume</a></li>
-            <li><a class="contact__nav" href="#contact__container">contact</a></li>
-            <li><a class="cats" href="#">cats</a></li>
+            <div class="initials">
+                <a class="home__nav2" href="#hero__container"><h3><span>{</span> A<i> // </i>B <span>}</span></h3></a>
+            </div>
+            <div class="footer__nav">
+                <a class="resume__nav2" href="#skills__container"><li>resume</li></a>
+                <a class="contact__nav3" href="#contact__container"><li>contact</li></a>
+                <a class="cats" href="cats"><li>cats</li></a>
+            </div>
         </nav>
         <div class="socials">
             <a href="https://github.com/audriannabell" target="_blank"><i class="fab fa-github-square fa-2x" alt="github"></i></a>
-            <a href="https://www.linkedin.com/in/audrianna-bell/" target="_blank"><i class="fab fa-linkedin fa-2x" alt="linkedin"></i></a>
             <a href="https://www.instagram.com/audriannadev/" target="_blank"><i class="fab fa-instagram-square fa-2x" alt="instagram"></i></a>
+            <a href="tel:909-438-3163" target="_blank"><i class="fas fa-phone-square fa-2x"></i></a>
             <a href="mailto:audrianna.e.bell@gmail.com"><i class="fas fa-envelope-square fa-2x" alt="email"></i></a>
         </div>
         <div class="footer__note">
