@@ -16,51 +16,38 @@ let contactButton3 = document.querySelector('.contact__nav3')
 let skillsButton = document.querySelector('.skills__nav');
 let skillsButton2 = document.querySelector('.skills__nav2');
 
-let resumeButton = document.querySelector('.resume__nav');
-let resumeButton2 = document.querySelector('.resume__nav2');
+function scrollToTarget(e){
 
-
-function scrollStart(e) {
     e.preventDefault();
-
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
-    inline: 'center'
-
+    
+    var element = document.querySelector(this.getAttribute('href'));
+    var headerOffset = 60;
+    var elementPosition = element.getBoundingClientRect().top;
+    var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+    window.scrollTo({
+         top: offsetPosition,
+         behavior: "smooth"
     });
-};
+}
 
-function scrollCenter(e) {
-    e.preventDefault();
 
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-    behavior: 'smooth',
-    block: 'center',
-    inline: 'center'
+homeButton.addEventListener("click", scrollToTarget)
+homeButton2.addEventListener("click", scrollToTarget)
 
-    });
-};
+aboutButton.addEventListener("click", scrollToTarget)
+aboutButton2.addEventListener("click", scrollToTarget)
 
-homeButton.addEventListener("click", scrollStart)
-homeButton2.addEventListener("click", scrollStart)
+projectButton.addEventListener("click", scrollToTarget)
+projectButton2.addEventListener("click", scrollToTarget)
+projectButton3.addEventListener("click", scrollToTarget)
 
-aboutButton.addEventListener("click", scrollCenter)
-aboutButton2.addEventListener("click", scrollCenter)
+skillsButton.addEventListener("click", scrollToTarget)
+skillsButton2.addEventListener("click", scrollToTarget)
 
-projectButton.addEventListener("click", scrollStart)
-projectButton2.addEventListener("click", scrollStart)
-projectButton3.addEventListener("click", scrollStart)
-
-skillsButton.addEventListener("click", scrollCenter)
-skillsButton2.addEventListener("click", scrollCenter)
-
-contactButton.addEventListener("click", scrollStart)
-contactButton2.addEventListener("click", scrollStart)
-contactButton3.addEventListener("click", scrollStart)
-
-resumeButton.addEventListener("click", scrollCenter)
-resumeButton2.addEventListener("click", scrollCenter)
+contactButton.addEventListener("click", scrollToTarget)
+contactButton2.addEventListener("click", scrollToTarget)
+contactButton3.addEventListener("click", scrollToTarget)
 
 //nav slide in on hamburger click
 

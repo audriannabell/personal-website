@@ -22,7 +22,7 @@
             <li><a class="about__nav" href="#about__container">about</a></li>
             <li><a class="projects__nav " href="#projects__container">projects</a></li>
             <li><a class="skills__nav" href="#skills__container">skills</a></li>
-            <li><a class="resume__nav" href="#skills__container">resume</a></li>
+            <li><a href="Audrianna Bell - Web Developer - Resume.pdf" target="_blank">resume</a></li>
             <li><a class="contact__nav" href="#contact__container">contact</a></li>
 
         </ul>
@@ -80,7 +80,7 @@
                     </div>
                     <div class="project__2">
                         <a href='todo' target="_blank">
-                            <img src="ToDo-Project.png" alt="Bar 42 Thumbnail">
+                            <img src="ToDo-Project.png" alt="To-Do App Thumbnail">
                             <h3>To-Do App</h3>
                             <p>Fully responsive to-do list app.</p>
                             <div class="project__buttons">
@@ -91,8 +91,8 @@
                     </div>
                     <div class="project__3">
                         <a href='linktree' target="_blank">
-                            <img src="Linktree-project.png" alt="Britney Aguilera Thumbnail">
-                            <h3>Britney Aguilera</h3>
+                            <img src="Linktree-project.png" alt="Linktree Thumbnail">
+                            <h3>Linktree Clone</h3>
                             <p>Linktree style page for a fictional musician.</p>
                             <div class="project__buttons">
                                 <a href='linktree' target="_blank"><button>View Site</button></a>
@@ -160,45 +160,51 @@
                         </div>
                         <div class="resume__container">
                             <h4>Open my resume to learn more.</h4>
-                            <button class="resume__button" href="#">Resume</button>
+                            <button class="resume__button"><a href="Audrianna Bell - Web Developer - Resume.pdf" target="_blank">Resume</a></button>
                         </div>
                     </div>
                 </div>
             </div>
         <div class="contact__container" id="contact__container">
+            <h2>Contact</h2>
             <div class="contact__content">
-                <div class="contact__text">
-                    <h2>Contact</h2>
-                    <h3>Say Hi!</h3>
-                    <a href="mailto:audrianna.e.bell@gmail.com">
-                        <i class="fas fa-envelope fa-xl" alt="email"></i>
-                        <p>audrianna.e.bell@gmail.com</p>
-                    </a>
-                    <a href="tel:909-438-3163">
-                        <i class="fas fa-phone fa-xl" alt="github"></i>
-                        <p>(909) 438-3163</p>
-                    </a>
+                <div class="contact__text">                    
+                    <div class="contact__split-left">
+                        <h3>Say Hi!</h3>
+                        <a href="mailto:audrianna.e.bell@gmail.com">
+                            <i class="fas fa-envelope fa-xl" alt="email"></i>
+                            <p>audrianna.e.bell@gmail.com</p>
+                        </a>
+                        <a href="tel:909-438-3163">
+                            <i class="fas fa-phone fa-xl" alt="github"></i>
+                            <p>(909) 438-3163</p>
+                        </a>
+                    </div>
+                    <div class="contact__split-right">
                     <h3>Follow Me</h3>
-                    <a href="https://github.com/audriannabell" target="_blank">
-                        <i class="fab fa-github fa-xl" alt="github"></i>
-                        <p>github.com/audriannabell</p>
-                    </a>
-                    <a href="https://codepen.io/audriannabell" target="_blank">
-                        <i class="fab fa-codepen fa-xl" alt="codepen"></i>
-                        <p>codepen.io/audriannabell</p>
-                    </a>
-                    <a href="https://www.instagram.com/audriannadev/" target="_blank">
-                        <i class="fab fa-instagram fa-xl" alt="instagram"></i>
-                        <p>@audriannadev</p>
-                    </a>
+                        <a href="https://github.com/audriannabell" target="_blank">
+                            <i class="fab fa-github fa-xl" alt="github"></i>
+                            <p>github.com/audriannabell</p>
+                        </a>
+                        <span>
+                                <a href="https://codepen.io/audriannabell" target="_blank">
+                                    <i class="fab fa-codepen fa-xl" alt="codepen"></i>
+                                    <p>codepen.io/audriannabell</p>
+                                </a>
+                        </span>
+                        <a href="https://www.instagram.com/audriannadev/" target="_blank">
+                            <i class="fab fa-instagram fa-xl" alt="instagram"></i>
+                            <p>@audriannadev</p>
+                        </a>
+                    </div>
                 </div>
                 <div class="form__container">
                     <form action="https://formsubmit.co/audrianna.e.bell@gmail.com" method="POST">
-                        <input type="text" id="name" name="name" alt="name" placeholder="Name" autocomplete="name" required>
-                        <input type="text" id="email" name="email" alt="email" placeholder="Email" autocomplete="email" required>
-                        <input type="text" id="phone" name="phone" alt="phone" placeholder="Phone (optional)" autocomplete="tel">
-                        <textarea id="message" name="message" alt="message" placeholder="Message" required></textarea>
-                        <input type="submit" id="submit" value="Send" accesskey="s"></submit>
+                        <input type="text" id="name" name="name" alt="name" placeholder="Name" autocomplete="name" required aria-label="Name">
+                        <input type="text" id="email" name="email" alt="email" placeholder="Email" autocomplete="email" required aria-label="Email">
+                        <input type="text" id="phone" name="phone" alt="phone" placeholder="Phone (optional)" autocomplete="tel" aria-label="Phone number">
+                        <textarea id="message" name="message" alt="message" placeholder="Message" required aria-label="Message"></textarea>
+                        <input type="submit" id="submit" value="Send" accesskey="s" aria-label="Send"></submit>
                     </form>
                 </div>
             </div>
@@ -215,7 +221,7 @@
                 <a class="home__nav2" href="#hero__container"><h3><span>{</span> A<i> // </i>B <span>}</span></h3></a>
             </div>
             <div class="footer__nav">
-                <a class="resume__nav2" href="#skills__container"><li>resume</li></a>
+                <a href="Audrianna Bell - Web Developer - Resume.pdf" target="_blank"><li>resume</li></a>
                 <a class="contact__nav3" href="#contact__container"><li>contact</li></a>
                 <a class="cats" href="cats"><li>cats</li></a>
             </div>
@@ -228,6 +234,7 @@
         </div>
         <div class="footer__note">
             <p>Thank you for visiting!</p>
+            <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=qLRO6ft10gIGv50M1YQIZJLXzzblpjFjxIIt2EW9iwTL6JZiciq1oot5Ass2"></script></span>
         </div>
     </footer>
 </body>
